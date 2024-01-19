@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GitHub Profile Viewer</title>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Profile</h1>
+        <input type="text" id="username" placeholder="Enter GitHub username">
+        
+        <!-- Add the search input for repositories -->
+        <input type="text" id="repoSearch" placeholder="Search repositories">
+
+        <select id="perPage" onchange="updatePerPage()">
+            <option value="10">10</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <button onclick="getProfile()">Get Profile</button>
+
+        <!-- Add loader elements -->
+        <div id="loader" class="loader"></div>
+
+        <div id="profile"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
